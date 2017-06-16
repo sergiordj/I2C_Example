@@ -97,14 +97,7 @@ bool ds3231_setTime(struct tm *time) {
 // get the temperature as an integer (rounded down)
 // returns true to indicate success
 bool ds3231_getTempInteger(int8_t *temp) {
-	uint8_t RTC_Temp[1];
-	RTC_Temp[0] = DS3231_ADDR_TEMP;
-	// get just the integer part of the temp
-	if (ciaaI2CWrite(DS3231_ADDR, RTC_Temp, 1) && ciaaI2CRead(DS3231_ADDR, RTC_Temp, 1)) {
-		*temp = (signed)RTC_Temp[0];
-		return true;
-	}
-	return false;
+	//Insert your code here
 }
 
 // get the time from the rtc, populates a supplied tm struct
@@ -217,6 +210,7 @@ int main(void)
 		}
 
 		//Get temperature and print it
+		/*
 		if (ds3231_getTempInteger(&temp)){
 			temp[1]=(temp[0]%10)+48;
 			temp[0]=(temp[0]/10)+48;
@@ -227,6 +221,7 @@ int main(void)
 		else {
 			dbgPrint("Error de lectura\n");
 		}
+		*/
 
 		pausems(5000);
 	}
