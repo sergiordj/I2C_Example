@@ -152,10 +152,10 @@ static void initHardware(void)
 	//Set RTC Hour
 	struct tm Initial_Hour;
 
-	Initial_Hour.tm_hour = 12;
-	Initial_Hour.tm_min	 = 58;
+	Initial_Hour.tm_hour = 21;
+	Initial_Hour.tm_min	 = 06;
 	Initial_Hour.tm_sec  = 00;
-	Initial_Hour.tm_mday = 15;
+	Initial_Hour.tm_mday = 16;
 	Initial_Hour.tm_mon  = 6-1;
 	Initial_Hour.tm_year = 2017-1900;
 
